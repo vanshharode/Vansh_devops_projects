@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>College Registration</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <div class="container">
+    <form id="registrationForm">
+      <h2>College Registration</h2>
+      <div class="input-group">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" required>
+      </div>
+      <div class="input-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required>
+      </div>
+      <div class="input-group">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="input-group">
+        <label for="stream">Admission Stream</label>
+        <select id="stream" name="stream" required>
+          <option value="">Select Stream</option>
+          <option value="Science">Science</option>
+          <option value="Commerce">Commerce</option>
+          <option value="Arts">Arts</option>
+        </select>
+      </div>
+      <div class="input-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <button type="submit">Register</button>
+    </form>
+  </div>
+  
+  <style>
+  
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: aqua;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+  }
+  
+  .container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  form {
+    width: 300px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .input-group {
+    margin-bottom: 20px;
+  }
+  
+  .input-group label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .input-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  </style>
+
+  <script src="script.js"></script>
+  
+</body>
+
+</html>
+<script>
+    document.getElementById("registrationForm").addEventListener("submit", function(event) {
+  event.preventDefault(); // Prevent form submission
+
+  // Get values from form
+  var username = document.getElementById("username").value;
+  var password = document.getElementById("password").value;
+  var name = document.getElementById("name").value;
+  var stream = document.getElementById("stream").value;
+  var email = document.getElementById("email").value;
+
+  // Simple validation (you may want to improve this)
+  if (username && password && name && stream && email) {
+    // Registration successful, you can perform further actions here
+    alert("Registration successful!");
+  } else {
+    alert("Please fill in all fields.");
+  }
+});
+
+</script>
